@@ -1,0 +1,114 @@
+body {
+    background: linear-gradient(135deg, #2e003e 0%, #ff00cc 100%);
+    color: #fff;
+    font-family: 'Creepster', cursive, 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: bg-flicker 2s infinite alternate;
+}
+
+@keyframes bg-flicker {
+    0% { filter: brightness(1); }
+    100% { filter: brightness(1.2) hue-rotate(30deg); }
+}
+
+.madness-container {
+    max-width: 600px;
+    margin: 10vh auto;
+    background: rgba(0,0,0,0.7);
+    border: 4px double #ff00cc;
+    border-radius: 30px;
+    box-shadow: 0 0 40px #ff00cc, 0 0 10px #2e003e inset;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #ff00cc, 0 0 20px #2e003e;
+    margin-bottom: 20px;
+}
+
+#madness-text {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    animation: text-flicker 1.5s infinite alternate;
+}
+
+@keyframes text-flicker {
+    0% { opacity: 1; }
+    100% { opacity: 0.7; color: #ff00cc; }
+}
+
+#madness-btn {
+    background: #ff00cc;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff00cc, 0 0 5px #2e003e inset;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#madness-btn:hover {
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 30px #ff00cc, 0 0 10px #2e003e inset;
+}
+
+#madness-effect {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.madness-formula {
+    margin: 40px 0 0 0;
+    font-size: 1.3em;
+    color: #ffeb3b;
+    background: rgba(30,0,60,0.7);
+    border-radius: 18px;
+    padding: 18px 24px;
+    box-shadow: 0 0 20px #ff00cc, 0 0 8px #2e003e inset;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    text-align: left;
+    position: relative;
+    animation: formula-flicker 2.5s infinite alternate;
+}
+
+@keyframes formula-flicker {
+    0% { filter: brightness(1) drop-shadow(0 0 2px #ff00cc); }
+    100% { filter: brightness(1.2) drop-shadow(0 0 8px #ffeb3b); }
+}
+
+.madness-formula .formula-title {
+    font-size: 1.1em;
+    color: #ff00cc;
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.madness-formula .formula-content {
+    font-size: 1.2em;
+    color: #fff;
+    margin-left: 12px;
+    display: block;
+    line-height: 1.7;
+    word-break: break-all;
+}
+
+.madness-formula .formula-quote {
+    display: block;
+    color: #b3fffc;
+    font-style: italic;
+    margin-top: 12px;
+    font-size: 1em;
+    text-shadow: 0 0 6px #00fff7;
+}
